@@ -1,0 +1,27 @@
+getExtension("Stockfish", "Sf");
+
+const btn = website.createElement("button");
+btn.textContent = "Calculate";
+btn.classList = "e";
+
+website.body.appendChild(btn);
+
+async function calc(){
+    const ans = website.getElement.byId("Ans");
+    ans.innerText = "Stockfish is Thinking...";
+
+    const fenInput = website.getElement.byId("FenInput");
+
+    const x = await Sf.calcFEN(fenInput.value);
+
+    if(x.success){
+        ans.innerText = x.bestmove;
+    } else{
+        ans.innerText = `Error: ${x.error}`;
+    }
+}
+
+
+btn.onclick = calc;
+
+website.body.addEventListener("keydown", (e) => {if(e.key === "Enter") calc();});

@@ -1,0 +1,44 @@
+body{
+    background-color: aliceblue;
+}
+
+.e{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#FenInput{
+    height: 25px;
+    width: 50em;
+
+    left: 50%;
+    top: 50%;
+}
+
+#title{
+    left: 50%;
+    top: 30%;
+}
+
+button{
+    background-color: lime;
+    cursor: pointer;
+    font-size: 2em;
+
+    left: 50%;
+    top: 60%;
+}
+
+#Ans{
+    font-size: 3em;
+
+    left: 50%;
+    top: 73%;
+}
+
+#WebIcon{
+    width: 10%;
+
+    left: 50%;
+    top: 15%;
+}
