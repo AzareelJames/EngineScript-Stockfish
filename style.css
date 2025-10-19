@@ -30,7 +30,8 @@ button{
 }
 
 #Ans{
-    font-size: 3em;
+    text-align: center;
+    font-size: 2.8em;
 
     left: 50%;
     top: 73%;
@@ -41,4 +42,11 @@ button{
 
     left: 50%;
     top: 15%;
+}
+
+#Ev{
+    font-size: 2.5em;
+
+    left: 50%;
+    top: 90%;
 }
