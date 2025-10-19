@@ -6,6 +6,8 @@ btn.classList = "e";
 
 website.body.appendChild(btn);
 
+const ev = website.getElement.byId("Ev");
+
 async function calc(){
     const ans = website.getElement.byId("Ans");
     ans.innerText = "Stockfish is Thinking...";
@@ -15,10 +17,16 @@ async function calc(){
     const x = await Sf.calcFEN(fenInput.value);
 
     if(x.success){
-        ans.innerText = x.bestmove;
+        ans.innerText = `${x.bestmove}\n${x.evaluation}`;
     } else{
         ans.innerText = `Error: ${x.error}`;
     }
+
+    ev.value = x.evaluation + 5;
+
+    if(isNull(x.evaluation)) ev.value = x.mate * 10
+
+    term.msg(x);
 }
 
 
