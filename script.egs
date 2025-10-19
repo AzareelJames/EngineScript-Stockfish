@@ -25,11 +25,10 @@ async function calc(){
     ev.value = x.evaluation + 5;
 
     if(isNull(x.evaluation)) ev.value = x.mate * 10
-
-    term.msg(x);
 }
 
 
 btn.onclick = calc;
 
 website.body.addEventListener("keydown", (e) => {if(e.key === "Enter") calc();});
+
